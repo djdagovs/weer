@@ -36,7 +36,7 @@ gulp.task('twig', function() {
 gulp.task('sass', function() {
     return gulp.src('web/assets/sass/**/*.{sass,scss}')
         .pipe(sass({outputStyle: 'compressed'}).on('error', function(error) {
-            gutil.log(error);
+            gutil.log(gutil.colors.red(error.formatted));
             this.emit('end');
         }))
         .pipe(autoprefixer())
@@ -58,7 +58,7 @@ gulp.task('fonts', function() {
 gulp.task('scripts_app', function() {
     return gulp.src(scripts.app)
         .pipe(uglify().on('error', function(error) {
-            gutil.log(error);
+            gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
         .pipe(concat('app.min.js'))
@@ -69,7 +69,7 @@ gulp.task('scripts_app', function() {
 gulp.task('scripts_vendor', function() {
     return gulp.src(scripts.vendor)
         .pipe(uglify().on('error', function(error) {
-            gutil.log(error);
+            gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
         .pipe(concat('vendor.min.js'))
