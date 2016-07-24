@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 var stylesheets = [
-    './bower_components/animate.css/animate.min.css',
     'web/assets/css/**/*.css'
 ];
 
