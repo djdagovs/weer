@@ -1,0 +1,12 @@
+{
+  "name": "weer",
+  "version": "1.0.0",
+  "description": "A personal weather website powered by a Raspberry Pi connected to a Davis Vantage Pro2 and other services.",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:raymondelooff/weer.git",
+    "type": "git"
+  },
+  "author": "Raymon de Looff <raydelooff@gmail.com>",
+  "license": "MIT"
+}
